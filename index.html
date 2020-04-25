@@ -7,25 +7,29 @@
 </head>
 <body>
     <h1>Vamos a capturar 2 variables para sumarlas</h1><br><br><br>
+    <!--Campos para asignar los valores-->
 <label for="a">Ingrese el primer número</label>
     <input type="number" id="a" name="A"><br><br>
     <label for="b">Ingrese el segundo número</label>
     <input type="number" id="b" name="B"><br>
+    <!--El botón para llamar a la función sumar-->
     <button onclick="sumar()">SUMAR</button><br>
+    <!--input donde se muestra el resultado-->
     <label for="resultado">Este es el resultado</label>
     <input type="number" id="resultado" name="resultado"><br>
     
 <script>
     function sumar(){
 
-    
+    //Se capturan los valores de los input y se almacenan en variables
     var a = document.getElementById("a").value;
     var b = document.getElementById("b").value;
-
+//Se define la variable de resultado
     var resultado;
 
     console.log("variable antes de parse", a);
     console.log("variable antes de parse", b);
+    //verificación de las variables si son cadenas vacías
     if (a == "") {
         a = 0;
        
@@ -44,8 +48,9 @@
 
     console.log("variable después de parse", a);
     console.log("variable después de parse", b);
-
+//se ejecuta la suma de las variables
     resultado = a + b;
+    //se muestra el resultado en el navegador
     document.getElementById("resultado").value = resultado
 }
 </script>
